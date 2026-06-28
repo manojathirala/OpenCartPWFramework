@@ -5,7 +5,7 @@ import { BasePage } from "./BasePage";
 export class HomePage extends BasePage{
     private readonly logout: Locator;
     private readonly headers: Locator;
-    private readonly name:Locator;
+  
   
    
 
@@ -13,7 +13,7 @@ export class HomePage extends BasePage{
         super(page);
         this.logout = page.getByRole('link',{name:'Logout'});
         this.headers = page.getByRole('heading',{level:2});
-        this.name = page.getByRole('checkbox');
+       
     }
 
     async verifyLogoutLink(): Promise<boolean>{
