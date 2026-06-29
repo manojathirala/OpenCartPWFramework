@@ -44,7 +44,7 @@ jobs:
           key: playwright-${{ hashFiles('package-lock.json') }}
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Install Playwright browsers
         if: steps.playwright-cache.outputs.cache-hit != 'true'
