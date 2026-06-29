@@ -28,15 +28,19 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: '22.11.0'
 
       - name: Check Node and npm versions
         run: |
           node -v
           npm -v
+          ls -la
 
       - name: Install stable npm
-        run: npm install -g npm@10
+        run: npm install -g npm@10.8.2
+
+      - name: Verify npm version
+        run: npm -v
 
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
