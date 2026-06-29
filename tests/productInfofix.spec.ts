@@ -29,7 +29,7 @@ test('get the metadata of the product ',async({homePage,productInfoPage,searchRe
 });
 
 //above test using csv with two sets of data
-let data = Csvhelper.readCsv('src/data/productinfo.csv');
+let data = Csvhelper.readCsv('src/data/productInfo.csv');
 
 for(let f of data){
 test(`metadata from csv ${f.product}`,async({homePage,productInfoPage,searchResultsPage})=>{
